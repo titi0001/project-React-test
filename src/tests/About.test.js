@@ -3,11 +3,10 @@ import { render, screen } from '@testing-library/react';
 import { About } from '../pages';
 import renderWithRouter from './renderWithRouter';
 
-describe('Teste a page About', () => {
+describe('Teste o componente About', () => {
   it('Teste se a página contém as informações sobre a Pokédex;', () => {
     render(<About />);
     const information = screen.getAllByText(/Pokédex/i);
-    console.log(information);
     expect(information).toHaveLength(2);
   });
   it('Teste se a página contém um heading h2 com o texto About Pokédex;', () => {
